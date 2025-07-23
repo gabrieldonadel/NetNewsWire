@@ -35,6 +35,7 @@ PROVISIONING_PROFILE_SPECIFIER =
 #include? "../../SharedXcodeSettings/ProjectSettings.xcconfig"
 #include? "../../SharedXcodeSettings/DeveloperSettings.xcconfig"
 #include "./common/NetNewsWire_ios_target_common.xcconfig"
+#include "../Pods/Target Support Files/Pods-NetNewsWire-iOS/Pods-NetNewsWire-iOS.debug.xcconfig"
 
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
 INFOPLIST_FILE = iOS/Resources/Info.plist
