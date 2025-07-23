@@ -74,3 +74,8 @@ fastlane/test_output
 /Frameworks/Secrets/Secrets.swift
 Secrets/Sources/Secrets/Secrets.swift
 *.py[cod]
+
+
+node_modules/
+Pods/
+.xcode.env.local
