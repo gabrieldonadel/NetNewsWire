@@ -46,6 +46,8 @@
 	<string>10.9</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 Sparkle Project. All rights reserved.</string>
+	<key>RCTNewArchEnabled</key>
+	<true/>
 	<key>XPCService</key>
 	<dict>
 		<key>ServiceType</key>

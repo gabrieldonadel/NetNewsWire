@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PLCrashReporter",
+        "repositoryURL": "https://github.com/microsoft/plcrashreporter.git",
+        "state": {
+          "branch": null,
+          "revision": "8c61e5e38e9f737dd68512ed1ea5ab081244ad65",
+          "version": "1.12.0"
+        }
+      },
+      {
+        "package": "RSCore",
+        "repositoryURL": "https://github.com/Ranchero-Software/RSCore.git",
+        "state": {
+          "branch": null,
+          "revision": "a2f711d64af8f1baefdf0092f57a7f0df7f0e5e8",
+          "version": "1.0.15"
+        }
+      },
+      {
+        "package": "RSDatabase",
+        "repositoryURL": "https://github.com/Ranchero-Software/RSDatabase.git",
+        "state": {
+          "branch": null,
+          "revision": "a6c5f1622320f745cc9a0a910d1bed1e2eaf15e3",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "RSParser",
+        "repositoryURL": "https://github.com/Ranchero-Software/RSParser.git",
+        "state": {
+          "branch": null,
+          "revision": "d5b50ff78905ebfaf26dd698e0e5d3ed8269dd9b",
+          "version": "2.0.3"
+        }
+      },
+      {
+        "package": "RSTree",
+        "repositoryURL": "https://github.com/Ranchero-Software/RSTree.git",
+        "state": {
+          "branch": null,
+          "revision": "9d051f42cfc4faa991fd79cdb32e4cc8c545e334",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "RSWeb",
+        "repositoryURL": "https://github.com/Ranchero-Software/RSWeb.git",
+        "state": {
+          "branch": null,
+          "revision": "aca2db763e3404757b273821f058bed2bbe02fcf",
+          "version": "1.0.7"
+        }
+      },
+      {
+        "package": "RSSparkle",
+        "repositoryURL": "https://github.com/Ranchero-Software/Sparkle-Binary.git",
+        "state": {
+          "branch": null,
+          "revision": "d1a8b3c98d96c601453f2e4230f1dd65b60d0581",
+          "version": "2.0.1"
+        }
+      },
+      {
+        "package": "Zip",
+        "repositoryURL": "https://github.com/marmelroy/Zip.git",
+        "state": {
+          "branch": null,
+          "revision": "059e7346082d02de16220cd79df7db18ddeba8c3",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

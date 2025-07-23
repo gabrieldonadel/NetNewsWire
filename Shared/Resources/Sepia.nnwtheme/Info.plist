@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Name</key>
-	<string>Sepia</string>
-	<key>ThemeIdentifier</key>
-	<string>com.netnewswire.themes.sepia</string>
 	<key>CreatorHomePage</key>
 	<string>http://netnewswire.com/</string>
 	<key>CreatorName</key>
 	<string>Ranchero Software</string>
+	<key>Name</key>
+	<string>Sepia</string>
+	<key>RCTNewArchEnabled</key>
+	<true/>
+	<key>ThemeIdentifier</key>
+	<string>com.netnewswire.themes.sepia</string>
 	<key>Version</key>
 	<integer>1</integer>
 </dict>

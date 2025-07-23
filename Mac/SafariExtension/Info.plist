@@ -62,5 +62,7 @@
 	<string>Copyright © 2019-2022 Brent Simmons. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
 	<string>This extension adds a Safari toolbar button for easily subscribing to the syndication feed for the current page.</string>
+	<key>RCTNewArchEnabled</key>
+	<true/>
 </dict>
 </plist>
