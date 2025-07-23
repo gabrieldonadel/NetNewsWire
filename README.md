@@ -1,4 +1,30 @@
-# ![Icon](Technotes/Images/icon.png) NetNewsWire
+# NetNewsWire + React Native
+
+This is an experimental fork of the original [NetNewsWire app](https://github.com/Ranchero-Software/NetNewsWire) with the sole purpose of testing brownfield support for Expo and React Native in large native-first codebases. Its commits serve as a reference for anyone interested in integrating React Native into an existing iOS app, especially those that don't want to refactor the whole project structure to accommodate React Native.
+
+## Integration steps
+
+Check commits for detailed steps
+
+1. **Set up a yarn monorepo**: Create a `package.json` file in the root directory, then add the following to it:
+
+   ```json
+   {
+     "private": true,
+     "workspaces": ["exp"]
+   }
+   ```
+
+2. **Create the Expo app**: Run `npx create-expo-app exp` to set up a new Expo app.
+
+3. **Install dependencies**: Add expo to you Podfile and run `pod install`
+
+4. **Add React Native view**: Create a new Swift file in the `NetNewsWire-iOS` target, for example `ReactNativeView.swift`, and implement a basic React Native view.
+
+<details>
+<summary>NetNewsWire</summary>
+
+## ![Icon](Technotes/Images/icon.png) NetNewsWire
 
 It’s a free and open-source feed reader for macOS and iOS.
 
@@ -40,11 +66,11 @@ You can do this in one of two ways: using the included `setup.sh` script or by c
 
 ##### Using `setup.sh`
 
-- Open Terminal and `cd` into the NetNewsWire directory. 
+- Open Terminal and `cd` into the NetNewsWire directory.
 - Run this command to ensure you have execution rights for the script: `chmod +x setup.sh`
 - Execute the script with the following command: `./setup.sh` and complete the answers.
 
-##### Manually 
+##### Manually
 
 Make a directory `SharedXcodeSettings` next to where you have this repository.
 
@@ -57,6 +83,7 @@ aDirectory/
   NetNewsWire/
     NetNewsWire.xcworkspace
 ```
+
 Example:
 
 If your NetNewsWire Xcode project file is at:
@@ -77,7 +104,7 @@ DEVELOPER_ENTITLEMENTS = -dev
 PROVISIONING_PROFILE_SPECIFIER =
 ```
 
-Set `DEVELOPMENT_TEAM` to your Apple supplied development team.  You can use Keychain
+Set `DEVELOPMENT_TEAM` to your Apple supplied development team. You can use Keychain
 Access to [find your development team ID](/Technotes/FindingYourDevelopmentTeamID.md).
 Set `ORGANIZATION_IDENTIFIER` to a reversed domain name that you control or have made up.
 Note that `PROVISIONING_PROFILE_SPECIFIER` should not have a value associated with it.
@@ -85,9 +112,11 @@ Note that `PROVISIONING_PROFILE_SPECIFIER` should not have a value associated wi
 You can now open the `NetNewsWire.xccodeproj` in Xcode.
 
 Now you should be able to build without code signing errors and without modifying
-the NetNewsWire Xcode project.  This is a special build of NetNewsWire with some
-functionality disabled.  This is because we have API keys that can't be stored in the
-repository or shared between developers.  Certain account types, like Feedly, aren't
+the NetNewsWire Xcode project. This is a special build of NetNewsWire with some
+functionality disabled. This is because we have API keys that can't be stored in the
+repository or shared between developers. Certain account types, like Feedly, aren't
 enabled and the Reader View isn't enabled because of this.
 
 If you have any problems, we will help you out in Slack ([see above](README.md#Community)).
+
+</details>
