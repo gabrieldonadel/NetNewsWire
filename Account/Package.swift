@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 var dependencies: [Package.Dependency] = [
@@ -26,7 +26,7 @@ dependencies.append(contentsOf: [
 
 let package = Package(
     name: "Account",
-	platforms: [.macOS(SupportedPlatform.MacOSVersion.v10_15), .iOS(SupportedPlatform.IOSVersion.v13)],
+	platforms: [.macOS(SupportedPlatform.MacOSVersion.v10_15), .iOS(SupportedPlatform.IOSVersion.v14)],
     products: [
         .library(
             name: "Account",
