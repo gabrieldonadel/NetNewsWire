@@ -423,6 +423,10 @@ class MasterFeedViewController: UITableViewController, UndoableCommandRunner {
 	@IBAction func settings(_ sender: UIBarButtonItem) {
 		coordinator.showSettings()
 	}
+
+	@IBAction func reactNative(_ sender: UIBarButtonItem) {
+		coordinator.showReactNative()
+	}
 	
 	@IBAction func toggleFilter(_ sender: Any) {
 		coordinator.toggleReadFeedsFilter()

@@ -1183,7 +1183,13 @@ class SceneCoordinator: NSObject, UndoableCommandRunner {
 		settingsViewController.presentingParentController = rootSplitViewController
 		rootSplitViewController.present(settingsNavController, animated: true)
 	}
-	
+
+	@objc func showReactNative() {
+		let reactNativeViewController = ReactNativeViewController()
+		reactNativeViewController.modalPresentationStyle = .formSheet
+		rootSplitViewController.present(reactNativeViewController, animated: true)
+	}
+
 	func showAccountInspector(for account: Account) {
 		let accountInspectorNavController =
 			UIStoryboard.inspector.instantiateViewController(identifier: "AccountInspectorNavigationViewController") as! UINavigationController
