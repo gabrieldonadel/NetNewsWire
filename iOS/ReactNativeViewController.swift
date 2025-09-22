@@ -1,19 +1,19 @@
 import React
 import ReactAppDependencyProvider
-import React_RCTAppDelegate
 import UIKit
+import Expo
 
 class ReactNativeViewController: UIViewController {
-	var reactNativeDelegate: ReactNativeDelegate?
-	var reactNativeFactory: RCTReactNativeFactory?
-	
+  var reactNativeDelegate: ExpoReactNativeFactoryDelegate?
+  var reactNativeFactory: RCTReactNativeFactory?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+
 		let delegate = ReactNativeDelegate()
 		let factory = RCTReactNativeFactory(delegate: delegate)
 		delegate.dependencyProvider = RCTAppDependencyProvider()
-		
+
 		reactNativeDelegate = delegate
 		reactNativeFactory = factory
 		let rootView = factory.rootViewFactory.view(withModuleName: "main")
@@ -21,16 +21,16 @@ class ReactNativeViewController: UIViewController {
 	}
 }
 
-class ReactNativeDelegate: RCTDefaultReactNativeFactoryDelegate {
-	override func sourceURL(for bridge: RCTBridge) -> URL? {
-		self.bundleURL()
-	}
-	
-	override func bundleURL() -> URL? {
+class ReactNativeDelegate: ExpoReactNativeFactoryDelegate {
+  override func sourceURL(for bridge: RCTBridge) -> URL? {
+    bridge.bundleURL ?? bundleURL()
+  }
+
+  override func bundleURL() -> URL? {
 #if DEBUG
-		RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: ".expo/.virtual-metro-entry")
+    return RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: ".expo/.virtual-metro-entry")
 #else
-		Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+    return Bundle.main.url(forResource: "main", withExtension: "jsbundle")
 #endif
-	}
+  }
 }
